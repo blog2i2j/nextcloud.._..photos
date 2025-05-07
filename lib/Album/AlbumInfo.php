@@ -53,4 +53,8 @@ class AlbumInfo {
 	public function getFilters(): ?string {
 		return $this->filters;
 	}
+
+	public function getDecodedFilters(): array {
+		return json_decode($this->filters, true) ?? [];
+	}
 }
